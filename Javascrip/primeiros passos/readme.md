@@ -1,0 +1,1 @@
+aolicações mobile e o web com react nativ e desktop com eletron

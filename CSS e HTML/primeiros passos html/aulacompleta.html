@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todas as Aulas</title>
+</head>
+<body>
+    <p>
+        <h1><strong>GLosario</strong></h1>
+    </p>
+    <p>
+        <ul>
+            <li><a href="#comentarios"> comentarios</a></li>
+            <li><a href="#Atributos">Atributos</a></li>
+            <li><a href="#Atributos Globais"> Atributos globais</a></li>
+            <li><a href="#semantica">semantica</a></li>
+            <li><a href="#Listas ordenadas e não ordenadas">Listas ordenadas e não ordenadas</a></li>
+            <li><a href="#citação">citação</a></li>
+            <li><a href="#abreviações">abreviações</a></li>
+            <li><a href="#Detalhes de contato">Detalhes de contato</a></li>
+            <li><a href="#Glosario">Glosario</a></li>
+            <li><a href="#mostrar codigo">mostrar codigo</a></li>
+            <li><a href="#Elementos genericos">Elementos genericos</a></li>
+            <li><a href="#hyperlink:">hiperlink</a></li>
+            <li><a href="#Fragmentos">Fragmentos</a></li>
+            <li><a href="#Imagens">Imagens</a></li>
+            <li><a href="#Caminho no proprio arquivo do codigo">Caminho no proprio arquivo do codigo</a></li>
+            <li><a href="#Caminho entre diretorios"> Caminho Entre diretorios</a></li>
+            <li><a href="#Tabelas">Tabelas</a></li>
+            <li><a href="#Tabela complexa">Tabela complexa</a></li>
+            <li><a href="#Meta">Meta</a></li>
+            <li><a href="#Icones">Icones</a></li>
+
+        </ul>
+    </p>
+
+
+    <h2>Conceitos</h2>
+    <h2 id="comentarios">comentarios</h2>
+    são deifinidos usando<strong><em>&lt;!--</em></strong><br><br>
+
+    <h2 id="Atributos">Atributos</h2>
+    podendo ser <em>booleans</em> onde não precisam de conteudo<br>como:
+    <p>
+         <code>
+                &ltinput type = "text" disabled&gt;
+        </code>
+    </p>
+
+    A tag &lt;a&gt; é usada para referenciar links como por exemplo:<br>
+    <p>
+        <code>
+            &lt;a href = "https://google.com"&gt;site do google &lt;/a&gt; 
+        </code>
+    </p>
+
+    sendo assim ficando legivel desse modo no site:<br>
+    <p><a href="https://twitter.com" target="_blank">twitter</a></p>
+    <br>
+
+
+    <h2 id="Atributos Globais">Atributos globais</h2>
+    <p>
+        <ul>
+            <li>Class</li>
+            <li>contenteditable: falso ou verdadeiro onde um pode ser editado e o outro não</li>
+            <li>data-*</li>
+            <li>hidden: esconder</li>
+            <li>style: estilo</li>
+            <li>tabinex: movimentar com tab</li>
+            <li>title: definir um titulo</li>
+            <li>id</li>
+        </ul>
+    </p>
+    <p>
+        Onde:<br>
+        Editavel;
+        <pre>
+            <code>
+                &lt;div class = "carrinho" contenteditable = "true&gt;<br>
+                &nbsp;peixe<br>
+        
+                &lt;/div&gt;<br>
+            </code>
+        </pre>
+        Não editavel;
+        <pre>
+            <code>
+                &lt;div class = "carrinho" contenteditable = "false&gt;<br>
+                &nbsp;carro<br>
+        
+                &lt;/div&gt;<br>
+            </code>
+        </pre>
+
+    </p>
+    <p>
+        <strong>EX:</strong><b>
+        
+        <br>Editavel:
+        <div class="carrinho" contenteditable="true" id="name1" tabindex="1">
+            peixe<br>
+        </div>
+        <br>
+        Não editavel:
+        <div class="carrinho 2" contenteditable="false" id=" name2" tabindex="3">
+            carro
+        </div>
+        <br>
+    </p>
+    <p>
+        <p>
+            onde:
+            <code>&lt;p&gt;</code>
+             serve para definir um paragrafo e <code> &lt;em&gt;</code> para da enfase, se tornar italico
+            especificar que se trata de um html usando:<br> 
+            <code>
+                &lt;!DOCTYPE html&gt;<br>
+            </code>
+            <code>
+                &lt;html&gt;
+            </code>
+
+            <code>
+                &lt;meta charset = "utf-8"&gt;<br>
+            </code>
+
+        <br>
+        usado para suportar todos os caracteres
+
+        </p>
+        
+        <ul>
+            <li>  lt; menor que</li>
+            <li> gt; maior que</li>
+            <li> quot ; aspas duplas</li>
+            <li> apos ; aspas simples</li>
+        </ul>
+
+    </p>
+
+    <p>
+        <h2 id="semantica">semantica</h2>
+        
+        serve para aplicar/dar siginificado, usando: <code>&lt;h&gt;</code>
+        <pre>
+            <code>
+                &lt;h1&gt; Sobre mim&lt;/h1&gt;
+                Meu nome é italo neves 
+
+                &lt;h2&gt; trabalho&lt;/h2&gt;
+                faço programa
+
+                &lt;h3&gt; experiencias&lt;/h3&gt;
+                não possuo experiencia
+
+            </code>
+        </pre>
+    </p>
+    <p>
+        <h2 id="Listas ordenadas e não ordenadas">Listas ordenadas e não ordenadas</h2>
+        
+        onde se ua o &lt;ol> para fazer uma ordenada e o &lt;ul para uma não ordenada
+        <pre>
+            <code>
+                &lt;h1&gt;Suco&lt;/h1&gt;
+                &lt;h2&gt;ingredientes&lt;/h2&gt;
+
+                &lt;!--ordenada--&gt;
+
+                &lt;ol&gt;
+                    &lt;li&gt;3 colves&lt;/li&gt;
+                    &lt;li&gt;1 laranja&lt;/li&gt;
+                    &lt;li&gt;1 gengibre&lt;/li&gt;
+                    &lt;li&gt;300 ml de água&lt;/li&gt;
+                    &lt;li&gt;adoçante&lt;/li&gt;
+                    &lt;li&gt;gelo&lt;/li&gt;
+                &lt;/ol&gt;
+
+                &lt;!--não ordenado--&gt;
+
+                &lt;ul>
+                    &lt;li&gt;3colves&lt;/li&gt;
+                    &lt;li&gt;1 laranja&lt;/li&gt;
+                    &lt;li&gt;1 gengibre&lt;/li&gt;
+                    &lt;li&gt;300 ml de água&lt;/li&gt;
+                    &lt;li&gt;adoçant&lt;/li&gt;
+                    &lt;li&gt;gelo&lt;/li&gt;
+                &lt;/ul&gt;
+            </code>
+        </pre>
+    </p>
+    <p>
+        A saida seria:<br>
+        <h1>Suco</h1>
+        <h2>ingredientes</h2>
+        <ol>
+            <li>3colves</li>
+            <li>1 laranja</li>
+            <li>1 gengibre</li>
+            <li>300 ml de água</li>
+            <li>adoçante</li>
+            <li>gelo</li>
+        </ol>
+        <ul>
+            <li>3colves</li>
+            <li>1 laranja</li>
+            <li>1 gengibre</li>
+            <li>300 ml de água</li>
+            <li>adoçante</li>
+            <li>gelo</li>
+        </ul>
+    </p>
+    <p>
+        <h2 id="citação">citação</h2>
+        <pre>
+            <code>
+                &lt;!--blockquote cite usadao para mostrar fr onde foi tirada a citação--&gt;
+
+                &lt;blockquote cite = https://jovemnerd.com.br/bunker/categoria/filmes/&gt;
+                    O site  &lt;strong&gt;Jovem Nerd &lt;code&gt;&lt;mario é coisa de criança&gt; &lt;/code&gt;
+                    &lt;/strong&gt; ou de  &lt;em>&quot;lélé&quot; &lt;/em&gt;
+                
+                &lt;/blockquote&gt;
+                
+
+                &lt;p>de acordo com o  &lt;a href="https://jovemnerd.com.br/bunker/categoria/filmes/"&lt;
+                    &lt;cite&gt;jovemnerd &lt;/cite&gt; &lt;/a&gt;
+                &lt;/p&gt;
+                
+
+                &lt;p>
+                    o elemento quote ==  &lt;code>&lt;q&gt; &lt;/code&gt; é &lt;q 
+                    cite="https://jovemnerd.com.br/bunker/categoria/filmes/" &gt;usado para citações que não precisam de paragrafos ou quebra
+                    de linhas&lt;/q&gt; -- &lt;a href="https://jovemnerd.com.br/bunker/categoria/filmes/"&gt;
+                    &lt;cite&gt;MDN q page &lt;/cite&gt; &lt;/a&gt;
+                &lt;/p&gt;
+
+            </code>
+        </pre>
+        
+    </p>
+    <p>
+        <h2 id="abreviações"> abreviações</h2>
+        <code> &lt;abrr&gt;</code><br>
+        usado para abrevivar e esconder toda a palavra
+
+        <pre>
+            <code>
+                &lt;p&gt;usamos &lt;abbr title=" hypertext markup language">HTML&lt;/abbr&gt; para estruturar nossos documentos web&lt;/p&gt;
+
+            </code>
+        </pre>
+    </p>
+    <p>
+        <h2 id="Detalhes de contato">Detalhes de contato</h2>
+        usado para colocar as informações
+        <pre>
+            <code>
+                &lt;address&gt;
+                    &lt;p&gt;italo neves&lt;/p&gt;
+                &lt;/address&gt;
+        </code>
+        </pre>
+
+
+    <p>
+        <h2 id="Glosario">Glosario</h2>
+        Lista de descrição
+        <pre>
+            <code>
+                &lt;dl
+                &lt;dt&gt;&lt;/dt&gt;
+                &lt;dd&gt;&lt;/dd&gt;
+
+            </code>
+        </pre>
+
+        codigo
+
+        <pre>
+            <code>
+                &lt;h2&gt;GLosario&lt;/h2&gt;
+                &lt;dl&gt;
+                    &lt;dt&gt;hypertext&lt;/dt&gt;
+                    &lt;dd&gt;É um hipertexto&lt;/dd&gt;
+
+                    &lt;dt&gt;Markup&lt;/dt&gt;
+                    &lt;dd&gt;Marcação de texto&lt;/dd&gt;
+                &lt;/dl&gt;
+            </code>
+        </pre>
+    </p>
+    <p>
+        <h2 id="mostrar codigo">
+            mostrar codigo
+        </h2>
+        representação de codigo no computador
+        <code>&lt;code&gt;</code> : partes genericas
+        <code>&lt;pre&gt;</code> : bloco de cogigos 
+
+        <pre>
+            <code>
+            &lt;pre&gt;
+                 &lt;code&gt;
+                    class italo {
+                      public static void main
+                    }
+                &lt;/code&gt;
+            &lt;/pre&gt;
+            </code>
+        </pre>
+    </p>
+    <p>
+        <h2 id="Elementos genericos">Elementos genericos</h2>
+        <pre>
+            <code>&lt;/div&gt;</code>
+            <code>&lt;span&gt;</code> :usado para separar semanticamente mas manter em linha
+
+        </pre>
+
+        <pre>
+            <code>
+                &lt;div class = "cart"&gt;
+                     &lt;span>Camisa&lt;/span&gt;
+                     &lt;span>R$ 59,99&lt;/span&gt;
+                
+                &lt;/div&gt;
+            </code>
+        </pre>
+
+        onde a saida seria:<br>
+        <div class = "cart">
+            <span>Camisa</span>
+            <span>R$ 59,99</span>
+        
+        </div>
+    </p>
+
+    <p>
+        <h2 id="hyperlink:"> hyperlink:</h2>
+       
+        elemento ancora <code>&lt;a&gt;</code>
+        <code>
+            &lt;a href=""&gt;&lt;/a&gt;
+        </code>
+            
+        href = referencia<br>
+        url completa, email, telefone, fragmento outros
+    
+        podendo recerber atributos: o a recebe atributos globais
+        download: colocando o link da imagem é possivel realizar o download
+        target:<br>
+        <strong>_self (padrão)</strong><br>
+        <strong>_blank : nova pagina</strong><br>
+        <code>
+            &lt;a href="" target=""&gt;&lt;/a&gt;
+        </code>
+        <p>
+            podendo ser colocado email, telefone ou sites
+        </p>
+        <pre>
+            <code>
+                &lt;p&gt;
+                &lt;h2&gt;Links&lt;/h2&gt;
+                &lt;/p&gt;
+                &lt;ul&gt;
+                    &lt;li&gt; &lt;a href="https://jovemnerd.com.br/bunker/categoria/filmes/" target="_blank"&gt;site&lt;/a&gt; &lt;/li&gt;
+                    &lt;li&gt; &lt;a href="nevessrichardsonn@gmail.com">email&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt; &lt;a href="tel:+5598991441574"> telefone&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+                
+            </code>
+    
+    </p>
+    <p>
+        <h3 id="Fragmentos">Fragmentos</h3>
+        Usado para direcionar a mais textos
+
+        <pre>
+            <code>
+                &lt;p&gt;saiba mais &lt;/p&gt;
+                &lt;ul&gt;
+                    &lt;li&gt; &lt;a href="#about">sobre mim &lt;/a> &lt;/li&gt;
+                    &lt;li&gt; &lt;a href="#historia">historia &lt;/a> &lt;/li&gt;
+                    &lt;li&gt; &lt;a href="#works">trabalhos &lt;/a> &lt;/li&gt;
+                &lt;/ul&gt;
+
+
+                &lt;h1 id="about"&gt;sobre mim  &lt;/h1&gt;
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                Eos eveniet natus sit assumenda voluptatum, magni maiores cum voluptatibus.
+                Modi, repellat quos! Saepe, animi enim. Architecto hic nulla aliquam laboriosam vero.
+                &lt;h2 id="historia">&gt;istoria &lt;/h2&gt;
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                Eos eveniet natus sit assumenda voluptatum, magni maiores cum voluptatibus.
+                Modi, repellat quos! Saepe, animi enim. Architecto hic nulla aliquam laboriosam vero.
+
+                &lt;h2 id="works"&gt;trabalhos  &lt;/h2&gt;
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                Eos eveniet natus sit assumenda voluptatum, magni maiores cum voluptatibus.
+                Modi, repellat quos! Saepe, animi enim. Architecto hic nulla aliquam laboriosam vero.
+            </code>
+        </pre>
+        
+
+    </p>
+
+    <p>
+        <h3 id="Imagens">Imagens</h3>
+        Colocar imagens usando hyperlink
+
+        <pre>
+            <code>
+                &lt;a href="https://google.com" title=" ir para o google "&gt;  &lt;h1>google &lt;/h1&gt;
+                    &lt;img src="https://source.unsplash.com/random" alt=""&gt;
+                
+                &lt;/a&gt;
+            </code>
+        </pre>
+    </p>
+    <p>
+        <h3 id="Caminho no proprio arquivo do codigo">Caminho no proprio arquivo do codigo</h3>
+        <pre>
+            <code> &lt;a href="aula2.html" target="_blank "&gt;abrir hyperlink &lt;/a&gt;</code>
+        </pre>
+    </p>
+       
+    <p>
+        <h3 id="Caminho entre diretorios">Caminho entre diretorios</h3>
+        <pre>
+            <code>
+                &lt;a href="teste.html"&gt; arquivo na mesma pasta&lt;/a&gt;
+                &lt;a href="../j01/teste/testeste.html"&gt; pasta diferente&lt;/a&gt;
+                &lt;a href="./aula1.html"&gt;diretorio raiz&lt;/a&gt;
+            </code>
+        </pre>
+    </p>
+    <p>
+
+        <h2 id="Tabelas">Tabelas</h2>
+        criando uma tabela simples
+        <pre>
+            <code>
+            &lt;atable>
+            &lt;acaption&gt;Pessoas por idade&lt;a/caption&gt;
+            &lt;athead&gt;
+                &lt;ath&gt;nome&lt;a/th&gt;
+                &lt;ath&gt;idade&lt;a/th&gt;
+            &lt;a/thead&gt;
+        
+            &lt;atbody&gt;
+                &lt;atr&gt;
+                    &lt;atd&gt;italo&lt;a/td&gt;
+                    &lt;atd&gt;22&lt;a/td&gt;
+                &lt;a/tr&gt;
+        
+            &lt;a/tbody&gt;
+            &lt;atfoot&gt;
+                 &lt;atr&gt;
+                    &lt;atd&gt;1 pessoa&lt;a/td&gt;
+                &lt;a/tr&gt;
+            &lt;a/tfoot&gt;
+            </code>
+        </pre>
+
+        </table>
+
+        <h3 id="Tabela complexa">Tabela complexa</h3>
+
+        <pre>
+            <code>
+                &lt;table&gt;
+                    &lt;caption&gt;produtos produzidos x vendidos por loja &lt;/caption&gt;
+                    
+
+
+                    &lt;!--definindo a cor e o numero de fileira que será pintada--&gt;
+
+                    &lt;colgroup&gt;
+                        &lt;col&gt;
+                        &lt;col span= "2" style="background-color: royalblue;"&gt;
+                        &lt;col span = "2" style="background-color: red;"&gt;
+                    &lt;/colgroup&gt;
+
+                    &lt;!--criando tabela deixando a primeira colula livre--&gt;
+                
+                    &lt;thead&gt;
+                        &lt;tr&gt;
+                            &lt;th rowspan="2"&gt; &lt;/th&gt;
+                            &lt;th colspan="2">loja 1 &lt;/th&gt;
+                            &lt;th colspan="2">loja 2 &lt;/th&gt;
+                        &lt;/tr&gt;
+                    
+                        &lt;!--criando produtos vendidos e produzidos --&gt;
+                
+                        &lt;tr&gt;
+                            &lt;th>produzidos &lt;/th&gt;
+                            &lt;th>vendidos&lt;/th&gt;
+                            &lt;th>produzidos &lt;/th&gt;
+                            &lt;th>vendidos &lt;/th&gt;
+                        &lt;/tr&gt;
+                
+                    &lt;/thead&gt;
+
+                    &lt;!--lista de produtos e sua venda--&gt;
+
+                    &lt;tbody&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;vassouras &lt;/th&gt;
+                            &lt;td&gt;50 &lt;/td&gt;
+                            &lt;td&gt;30 &lt;/td&gt;
+                            &lt;td&gt;20 &lt;/td&gt;
+                            &lt;td&gt;20 &lt;/td&gt;
+                
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;Baldes &lt;/th&gt;
+                            &lt;td&gt;10 &lt;/td&gt;
+                            &lt;td&gt;10 &lt;/td&gt;
+                            &lt;td&gt;30 &lt;/td&gt;
+                            &lt;td&gt;25 &lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                &lt;/table>
+            </code>
+        </pre>
+    </p><br>
+
+    <p>
+        a saida seria desse modo:
+
+        <table>
+            <caption>produtos produzidos x vendidos por loja</caption>
+        
+            <colgroup>
+                <col>
+                <col span= "2" style="background-color: royalblue;">
+                <col span = "2" style="background-color: red;">
+            </colgroup>
+        
+            <thead>
+                <tr>
+                    <th rowspan="2"></th>
+                    <th colspan="2">loja 1</th>
+                    <th colspan="2">loja 2</th>
+                </tr>
+        
+                <tr>
+                    <th>produzidos</th>
+                    <th>vendidos</th>
+                    <th>produzidos</th>
+                    <th>vendidos</th>
+                </tr>
+        
+            </thead>
+        
+            <tbody>
+                <tr>
+                    <th>vassouras</th>
+                    <td>50</td>
+                    <td>30</td>
+                    <td>20</td>
+                    <td>20</td>
+        
+                </tr>
+                <tr>
+                    <th>Baldes</th>
+                    <td>10</td>
+                    <td>10</td>
+                    <td>30</td>
+                    <td>25</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </p>
+
+    <p>
+        <h3 id="Usando acessibilidade">Usando acessibilidade</h3>
+        <pre>
+            <code>
+
+                &lt;!--especificando colunas, para melhor entendimento do motor--&gt;
+
+                    &lt;tr>
+                        &lt;th scope="col">produzidos&lt;/th&gt;
+                        &lt;th scope="col">vendidos&lt;/th&gt;
+                        &lt;th scope="col">produzidos&lt;/th&gt;
+                        &lt;th scope="col">vendidos&lt;/th&gt;
+                    &lt;/tr&gt;
+        
+                &lt;/thead&gt;
+
+                &lt;!--especificando linhas--&gt;
+        
+                 &lt;tbody&gt;
+                    &lt;tr&gt;
+                        &lt;th&gt; scope="row">vassouras&lt;/th&gt;
+                        &lt;td&gt;50&lt;/td&gt;
+                        &lt;td&gt;30&lt;/td&gt;
+                        &lt;td&gt;20&lt;/td&gt;
+                    &lt;td&gt;20&lt;/td&gt;
+            </code>
+        </pre>
+        
+    </p>
+
+    <p>
+        <h2 id="Meta">Meta</h2>
+
+
+        meta charset aceitar caracteres e entender eles <br>
+        meta name: especificar o nonme, content: falar conteudo <br>
+        author : mostrar o autor da pagina <br>
+        description: mostrar uma descriçaão no motor de busca <br>
+        robots: definir o que o robo do google faz <br>
+
+        <pre>
+            <code>
+                &lt;meta charset="UTF-8"&gt;
+                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                &lt;meta name="author" content="italo"&gt;
+                &lt;meta name="description" content="esse site é pipipi"&gt;
+                &lt;meta name="robots" content="index, follow "&gt;
+            </code>
+        </pre>
+
+    </p>
+
+    <p>
+        <h2 id="Icones">Icones</h2>
+
+        &lt;link&gt; usado oara icones personalizados <br>
+        favicon: usado para icones basicos <br>
+
+        <pre>
+            <code>
+                &lt;link rel="icon" href="https://www.parededepapel.com.br/adesivo-de-parede-infantil-ursinho-nuvem-azul">
+
+
+                &lt;!--Para iphone não retina ipod touch e dispotivos androis 2.1+--&gt;
+
+
+                &lt;link rel="apple-touch-icon-precomposed" href="https://www.parededepapel.com.br/adesivo-de-parede-infantil-ursinho-nuvem-azul">
+
+
+                &lt;!--Ipad de primeira geração definir o tamanh--&gt;
+
+
+                &lt;link rel="apple-touch-icon" sizes="48x48" href=""&gt;
+
+                &lt;link rel="apple-touch-icon" sizes="72x72" href=""&gt;
+
+                &lt;link rel="apple-touch-icon" sizes="96x96" href=&gt;
+
+
+                &lt;!--Com tela de retina alta resolução--&gt;
+
+
+                &lt;link rel="apple-touch-icon" sizes="144x144" href=""&gt;
+
+
+                &lt;!--ipad de terceirs geração--&gt;
+
+
+                &lt;link rel="apple-touch-icon" sizes="192x192 " href=""&gt;
+                &lt;link rel="apple-touch-icon" sizes="256x256 " href=""&gt;
+                &lt;link rel="apple-touch-icon" sizes="384x384 " href=""&gt;
+                &lt;link rel="apple-touch-icon" sizes="512x512 " href=""&gt;
+            </code>
+        </pre>
+    </p>
+
+</body>
+</html>

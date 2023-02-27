@@ -1,0 +1,341 @@
+@import 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap';
+
+
+body {
+
+    height: 100vh;
+    font-family: system-ui;
+    background: cadetblue;
+
+    /*text-align: center;*/
+
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+
+    color: white;
+    border: 1px solid red;
+    margin: 200px;
+    padding: 60px;
+    text-align: center;
+}
+
+button {
+    background-color: aqua;
+    color: blueviolet;
+    border: 1px solid grey;
+    text-align: center;
+    margin-left: 400px;
+    border-radius: 20%;
+
+    padding: 2px;
+}
+
+p {
+
+
+
+    color: white;
+
+
+}
+
+/*div{
+    text-align: center;
+    margin-left: 300px;
+    margin
+    background-color: red;
+    width: 50px;
+    height: 50px;
+
+}*/
+/* shorthand
+
+
+*jjunção de propriedade
+*resumido
+*legivel
+
+    background-color: #ooo;
+    background-image: url();
+    background-repeat: no-repeat;
+    background-position: left top;
+  podendo se fazer assim
+    background: #000 url () no-repeat left top;
+
+    com fonte 
+    font-style: italic;
+    font-weitght: bold;
+    font-size: .8em;
+    line-height: 1.2;
+    font-family: Arial, sans=sreif;
+
+    podendo ser feito
+
+    font: italic bold .8em/1.2, sans_serif
+
+    valores não especificados irão assumir o valor padraão
+
+
+    funções
+    nome seguido do parenteses
+
+    ex @import url();
+
+
+
+    vendor prefixes
+
+    permite que o browser adcione features
+
+    -webkit-backgroud-clip: text chrome safari ios android
+    -moz-backgroud-clip: text; mozilla
+    -ms-background-clip: text; internet explorer
+    -o-background-clip: text; opera
+
+
+
+    -------------------------------
+
+    valores e unidades de medida css
+
+    cada propriedade possui valores 
+
+    <color > <length>
+
+    tipos numericos 
+
+    <integer> numeros inteiros
+    <number> numero decimais
+    <dimension> é um <number> com uma unidade junto: 90deg, es, 8px
+    <porcentagem> representa a fração de outro numero 50%
+
+    unidades comuns
+
+    <lenght> representa valor de distancia: px, em, vw
+    <angle>  representa um angulo]: deg, rad, turn
+    <time> representa um tempo: s, ms
+    <resolution> representa resoluções para um dispositivo: dpi
+
+
+    distancias absolutas
+    cm
+    in
+    px  
+
+    relativas
+    relativas a outro valor pode ser o elemento pai
+
+    em : relativo a font do pai
+    rem tamanho da fonte raiz
+    vw 1% do viewport width
+    vh 1% da viewport height
+
+    --------------
+
+
+
+    position
+
+    representada por cordenadas
+    top, right, bottom, left, center
+
+
+
+
+
+bac
+
+.box{
+    height: calc(60% + 20px);
+    width: 400px;
+    background-image: url(http://source.unsplash.com/random);
+
+    background-repeat: no-repeat;
+    background-position: right 100px;
+}
+
+.box::after{
+    content: "italo Neves";
+    color: deeppink;
+}
+*/
+
+
+
+/*
+funções
+calc()
+
+
+---------------
+
+*/
+
+/*
+box model:
+caixa retangular, essa caixa possui uma propriedade de uma caixa 2d
+
+tamanho: (largura x altura ) widht | height
+conteúdo: content
+bordas: border
+preenchimento interno: padding
+espaços fora da caixa: margin
+
+box-sizing: uusado para contar de uma borda a outra 
+box-sizing: border-box;
+
+(colocar na frente)
+div{
+    color: antiquewhite;
+    width: 20px;
+    height: 100px;
+    border: 1px solid red;
+    margin: 10%;
+    padding: 0 17px;
+    padding-top: 15px;
+
+
+}
+
+*/
+
+
+
+/*
+display: block vs display:inline 
+
+
+
+display: como as caixas se comportam em relação a outra
+
+block: <p>, <div>, <section>, todos os heading <h1><h2>
+ocupa toda a linha colocando o  proximo elemento abaixo desse 
+width e height são respeitaos
+padding, margin, border, irão funcionar normalmente
+
+
+line: <a> <strong> <span> <>em
+elementos ao lado do outro
+widht e height não funcionam
+somente valores horizontais de margin, padding e border
+
+
+display: block; para o inline ter o comportamento da block
+
+div {
+
+    border: 5px solid black;
+    height: 100px;
+    width: 100px;
+    
+
+}
+
+
+*/
+
+/*
+margin: espaço entre os elementos
+
+margin-top, right, botton, left
+
+aceitando valores de <length>, <porcentage> | auto
+div{
+    (shorthand)
+
+    margin: 12px 16px 10px 4px;
+    
+    cima, laterais, baixo
+    margin: 12px 16px 0;
+
+    cima e baixo, laterais
+    margin: 8px 16px;
+
+    todas as laterais:
+    margin; 8px
+}
+aplicar como padrão para remover todas as margens do computador
+*{margin : 0;}
+div{
+    border: 2px solid black;
+    width:  100px;
+    height: 100px;
+
+    margin: 250px;
+}
+*/
+
+
+
+/*
+padding: preenchimento interno da caixa
+top - right - botton - left
+
+values: <length > | <percentage> | auto
+
+tambem funciona o shorthand
+
+pode causa diferença na largura de um elemento 
+
+mexe somente por dentro, diferente da margem que movimenta por fora
+* {margin: 0;}
+
+
+div{
+    border: 2px solid red;
+
+    padding: 20px;
+
+}
+
+
+*/
+
+/*
+bordas da caixa
+tendo valores de  <border-style>, border-width, border-color 
+
+style: solid, dotted, dashed, double, groove, ridge, inset, outset
+widht <legth>
+color: <color>
+
+
+border-top: solid 2px; (top, right, button, left)
+
+style
+border: solid;
+
+width <length> | style
+border: 2px dotted;
+
+style | color
+border: outset #f33;
+
+wigth | style |color
+border: medium dashed grenn;
+
+*/
+ * {margin: 0;}
+ div{
+    width: 100px ;
+    height:  100px;
+    margin: 20% auto;
+    border-top: 20px solid green;
+    border-left: double green 10px;
+    border-right: double red 10px;
+
+    border-bottom: 20px solid red;
+
+    /*colocar borda ao redor  */
+
+    outline: black 4px solid;
+
+ 
+/*padding-top: -2px;*/  
+    padding-left: 10px;
+    box-sizing: border-box;
+
+    /**box-sizing para as bordas sendo parte de widht /
+ }

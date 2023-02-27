@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="style.css">
+
+
+<!--
+    primeiro definir o elemento que seá o formulari
+
+    vai ser m conteudo estilo <sectuin > <footer>
+
+
+        atributos basicos 
+        action : para onde esse formulario vai ser submetido
+        method : post e get 
+
+
+        post usado para criar algo, esconder os dados
+        get pesquisa 
+
+
+        <fieldset>
+            agrupamento de campos 
+
+            atributos especiais
+            disabled: desabilita todos os elementos internos
+            não seraõ enviados a submeter o formulario
+
+
+            from: id do formulario que o fieldset pertence, n~]ão precisa esta dentro do formukario
+
+            name: nome do grupo
+
+        <legend>
+            nome do agrupamento
+            primeiro elemento dentro do fieldset
+
+
+<form action="">
+    <fieldset>
+        <legend>Contato</legend>
+        <input type="text">
+    </fieldset>
+</form>
+
+    Label
+    associar e identificar uma o mais tags de entrada de dados
+    acessibilidade
+    pode mudar o foco da entrada de dados 
+
+
+    atributos 
+    for - fazer a conexão entre este label e a tag de entrada de dados 
+    é feita via ip do input
+
+    so funciona com elementos especificos
+        button, input (not hidden) meter output
+        progress select textarea
+
+um modo:
+<label>
+    name
+ 
+    <input type="text">
+    <button>Enviar</button>
+</label>
+
+
+outro modo
+
+<label for="nome">Nome completo</label>
+<input id="nome" type="text">
+
+
+
+    button
+    password, checkbox, radio, file
+    atributos
+
+    type
+        submit fazendo com que algo seja enviado 
+        reset resertar o formulario 
+        button
+
+    autofocus
+    disable : não da para ser enviado bom para impedir que clice no botão antes de tudo esta preenchido
+    name pode usar o value junto
+    value
+    form linkar aum formulario 
+
+    <form action="">
+    <input type="text" value="Italo Foda">
+    <button class="button_home" type = "reset">apagar</button>
+</form>
+
+    <datalist>
+        lista de valores como sugestão para uma tag <input>
+        valores sugestivos e não obrigatorios
+        uvuarios poderão selecionar um dos valores ou colocar um valor diferente da sujestão
+
+<datalist id= "fruitdata">
+    <option>apple</option>
+
+</datalist>
+
+list: atributo que vai receber esse id
+
+os tipo de imput sportados são o 
+text
+seach
+url
+tel
+email
+date
+month
+week
+time
+datetime-local
+number
+ranger
+color
+<input type="text" list="fruitdata" placeholder="escoha uma fruta">
+<datalist id="fruitdata">
+    <option>carne</option>
+    <option >peixe</option>
+
+</datalist>    
+-->
+
+
+<!--
+    input
+    atributos
+
+    type
+        name
+        date
+        password
+        id
+        number: para aceitar só 
+        email
+        file: puxar arquivos do coputador
+
+
+    autocomplete
+    autofocus 
+    disable
+    readonly: apneas para leitura
+    value
+    form: fazer com que o input faça parte do form
+            <form action="meu_form">
+            </form>
+            <input name="email" type="email" form="meu_form" autocomplete="email">
+    required (quase todos) (obrigatorio)
+    placeholder (senha, seach, tel, text, url)
+    <input type="emai" placeholder="Digite o seu e-mail" autocomplete="email">
+
+    deixando bom para acessibilidade
+        <label for="email">Email</label>
+        <input class="input2" id="email" type="email" placeholder="Digite seu e-mail">
+<input type="date">
+
+<input type="password">
+
+
+password
+
+como ela vai ser escondida vai depender do navegador
+
+atributos
+            minlength / maxlenght
+                numero minimo o maximo de caracteres que vão ser aceitavel
+            <form action="">
+            <input type="password" minlength="6"
+            size="6">
+            <button type="submit">enviar</button>
+            </form>
+            
+            size
+                numero aceitavel de caracteres
+            pattern
+                expressão reglarr para validar o que esta sendo digitado no campo
+                altamente recomentado o uso de um padrão de senhas
+                por exemplo conter caracteres hexadecimais
+                 <form action="">
+
+                    <input type="password" pattern="[0-9a-fA-F] {4,8}"
+                    title="coloque hexadecimais"
+                    placeholder="coloque sua senha ">
+                    <button type="submit">Enviar</button>
+
+                </form> 
+             placeholder: mostrar um exemplo di qye deve ser digitado
+
+            required (campo obrigatorio)
+            
+            inputmode
+                alteraar o uso do teclado em smartphones
+                exemplo, querer que digite só numeros
+                inputmode="numeric"
+
+            autocomplete
+            on: permite sugestão de nova: new-password ou current-password
+            off: desabilita a opção auto completar
+            new-password: o navegador poderá sugerir uma nova senha
+
+            <form action="">
+            <input type="password"
+            autocomplete="new-password">
+            </form>
+
+
+        email
+
+        placeholder
+        required (obrigatorio)
+        multile : varios emails separados por virgula
+        minlenght
+
+
+        url
+        spellcheck
+
+
+        file
+        pode escolher entre um ou mais arquivos para enviar no formulario
+
+        atributos
+            value: contem o arquivo a ser enviado
+
+            accept: descreve os tipos que serão aceitos
+
+            files: a lista de arquivo
+
+            multiple: permite o envio de multiplos arquivos
+
+            <input type="file" accept=".pdf">
+
+            #para o envio de arquivos o formulario deverá utilizar o método
+            POST
+            e atribuido ectype como "multpart/from-data "
+
+            <form action="" method="post" enctype="multipart/form-data">
+                <input type="file">
+            </form>]
+
+
+
+        checkbox
+        necessita selecionar o valor para ser enviado
+
+        atributps:
+        globais
+        value
+            valor que aquele compo contem
+            se não estiver presente o padrão é on
+        checked
+            para deixar marcado por padrão 
+        <label for="escrever"> receber notificação</label>
+        <input type="checkbox" name="escrever" id="escrever" checked>
+
+        <label for="nao_escrever">não receber notificação</label>
+        <input type="checkbox" name="nao_escrever" id="nao_escrever" >
+
+        marcar multiplos valores
+            <fieldset class="campo">
+                <legend>Escolher seus intereces</legend>
+                <div>
+                    <input type="checkbox" id="codding" name="insterest"
+                    value="codding">
+                    <label for="codding">Codding</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="music" name="music"
+                    value="music">
+                    <label for="music">Music</label>
+
+                </div>
+
+
+            </fieldset>
+
+
+        hidden
+        invisivel ao usuario
+        saber o horario que o formulario foi enviado
+        <input type="hidden" name="id" value="8">
+
+
+        Radio
+        selecionar uma unica opçaõ em um grupo de opção
+
+        atributos essenciais
+        checked : indica o campo que foi marcado
+        value: valor que aquele campo contem
+
+        <fieldset>
+            <legend>Quer um café?</legend>
+            <label for="yep">sim</label>
+            <input type="radio" id="yep" name="coffee" value="yes">
+
+
+            <label for="nono">não</label>
+            <input checked type="radio" id="nono" name="coffee" value="no">
+
+        </fieldset>
+
+
+
+        textarea
+
+
+        textos de mais uma linha[
+        
+        atributos
+        id
+            <label for="message">mensagem</label>
+            <textarea id="message" ></textarea>
+
+        name
+
+
+        rows cols: definir no tamanho
+            <textarea cols="30"  rows="10"></textarea>
+
+        maxlenght minlenght
+
+
+        wrap
+        on: cortar o texto dentro da caixa 
+        Não cortar o texto dentro da caixa
+
+
+        select
+
+        controle que fornece um n=menu de opçoes
+
+        <option>
+            contem opçoes de entrada a serem selecionadas
+            atributos necessarios:
+                value
+        
+        atributos unucos
+        multiple: mutiplica opções
+
+        size: quantas opções visiveis
+
+
+                <label for="carro">quaal o modelo do carro</label>
+                <select name="carro" id="carro" >
+                    <option value="">selecione o modelo</option>
+                    <option value="porcher">porcher</option>
+                    <option value="uno">uno</option>
+                </select>
+
+
+        optgroup : agrupar opções
+        sempre seguido do label
+        <optgrout label = "pets">
+
+
+            
+        search
+
+        pesquisa, campo de busca
+
+        atributos
+            list/ <datalist>
+                <datalist id="procurartermo">
+                    <option >mac</option>
+                    <option >linus</option>
+                    <option >windows</option>
+                </datalist>
+
+                <input type="search" name="q" list="procurartermo">
+
+
+            pattern
+<form action="">
+
+    <label for="">pesquisar pelo id</label>
+
+    <input type="search" name="id"
+    pattern="[0-9] {2}">
+
+    <button>pesquisa</button>
+
+</form>
+
+
+
+            aria-label
+
+            para quando o label não puder ser usado
+
+            <datalist id="procurartermo">
+    <option >mac</option>
+    <option >linus</option>
+    <option >windows</option>
+</datalist>
+
+<form action="">
+    <input type="search" name="q" list="procurartermo"
+    placeholder="digite seu termo de busca"
+    aria-label="campo de pesquisa"
+    size="60px">
+    <button>pesquisa</button>
+
+</form>
+
+        number
+
+        entrada de numeros
+        atributos
+        min/max
+        
+        <form action="">
+              <input type="number" min="1" max="10">
+               <button>enviar</button>
+        </form>
+
+        step
+        pular os numeros
+<form action="">
+    <input type="number" step="5">
+    <button>enviar</button>
+</form>
+
+
+        ranger
+
+        controle para selecionar um valor numerico
+        slider ou dial control
+
+        atributos
+        min/max
+        step
+<input type="range" min="1" max="20" step="2">
+
+
+        data e hora
+
+<input type="date" value="yyyy-mm-dd">
+<div>
+    <input type="datetime-local">
+</div>
+<input type="time">
+
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
