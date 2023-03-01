@@ -50,7 +50,7 @@ console.log(copo)
 
 let subject = 'create video'
 
-//o modo de fazer o subject virar studynas duas opções é removendo 
+//o modo de fazer o subject virar study nas duas opções é removendo 
 //o parametro
 /*
 function createThink(){    
@@ -62,3 +62,45 @@ function createThink(subject) {
 }
 console.log(subject)
 console.log(createThink(subject))
+
+
+//jeito mais compacto
+const sayMyName = () => {
+    console.log("italo")
+}
+sayMyName()
+
+
+//callback function: uma função que esta passando
+//como parametro para outra função
+
+function italo ( neves){
+    console.log(neves)
+}
+
+italo(
+    function () {
+        console.log("eu sou italo neves")
+    }
+)
+
+//function () constructor
+
+//* expressão new
+//*cria um novo objeto
+//* this keyword
+
+function Person (name) {
+    this.name = name
+    this.walk = function(){
+        //return "andando"
+        return `${this.name}esta andando`
+    }
+}
+const silva = new Person ('Silva')
+console.log(silva.walk)
+
+
+let azevedo = new Date ("2023-03-01")
+console.log(azevedo)
+

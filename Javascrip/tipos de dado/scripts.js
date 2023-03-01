@@ -61,6 +61,9 @@ console.log([
     3
 ])
 
+let myArray  = ["a", "b", "c"]
+console.log(myArray)
+
 
 /*
 primitivos
