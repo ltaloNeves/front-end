@@ -105,7 +105,7 @@ console.log(two !== 2)
 Operadores logicos
 */
 
-let pao = false
+let pao = true
 let queijo = true
 
 //AND &&: verdadeiro verdadeiro "e"
@@ -117,3 +117,13 @@ console.log(pao || queijo)
 //not ! 
 console.log(!pao)
 
+//operador condicional
+//condition ? value1 : value2
+
+
+const beloCafe = pao && queijo? "café top" : "café ruim"
+console.log(beloCafe)
+
+//falsy
+
+//truly

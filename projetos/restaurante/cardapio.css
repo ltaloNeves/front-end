@@ -1,0 +1,71 @@
+body {
+    margin: 0%;
+    background-image: linear-gradient(90deg, #ADD8E6, #87CEEB, #87CEFA);
+    color: black;
+    height: 100%;
+    display:grid;
+    grid-template-areas: 
+    "buttons buttons"
+    "none none"
+    "cardapio cardapio";
+
+    grid-template-rows: 10vh 10vh 80vh;
+
+    
+}
+.buttons{
+    grid-area: buttons;
+    display: flex;
+    justify-content: space-between;  
+
+}
+
+.back{
+    cursor: pointer;
+    width: 25%;
+    height: 100%;
+    background-color: rgba(0,0,0,0);
+    transition: transform 0.2s ease-in-out;
+    border: none;
+}
+.back:hover{
+    color: black;
+    border-radius: 10px;
+    transform: scale(1.2);
+    transform-origin: center center;
+}
+.back:active{
+    background-color: rgba(0,0,0,0);
+    transform: translateY(1px);
+}
+
+
+
+.menu{
+
+    cursor: pointer;
+    width: 25%;
+    height: 100%;
+    background-color: rgba(0,0,0,0);
+    transition: transform 0.2s ease-in-out;
+    border: none;
+    
+}
+.menu:hover{
+    color: black;
+    border-radius: 10px;
+    transform: scale(1.2);
+    transform-origin: center center;
+}
+.menu:active{
+    background-color: rgba(0,0,0,0);
+    transform: translateY(1px);
+}
+
+
+.cardapio{
+
+    grid-area: cardapio;
+    text-align: center;
+}
+

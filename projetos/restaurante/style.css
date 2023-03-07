@@ -1,50 +1,81 @@
 body {
+    margin: 0%;
     background-image: linear-gradient(90deg, #ADD8E6, #87CEEB, #87CEFA);
     color: black;
+    height: 100%;
+    display:grid;
+    grid-template-areas: 
+    "h1"
+    'container';
+
+
 }
 
 h1 {
+    
+    grid-area: h1;
     justify-content: center;
 
     text-align: center;
     font-size: 60px;
+
+}
+
+.container{
+    grid-area: container;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    margin: 0;
 }
 
 .Reserva {
-    width: 600px;
+    grid-area: Reserva;
+    width: 200px;
     height: 40px;
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 0);
-    position: absolute;
-    top: 20%;
-    left: 28%;
     transition: transform 0.2s ease-in-out;
     cursor: pointer;
+    position: absolute;
+    top: 5%;
+    left: 30%;
 }
 
 .Reserva:hover {
     border: 2px solid black;
     color: black;
     transform: scale(1.2);
+ 
     transform-origin: center center;
 }
 
 .Reserva:active {
     background-color: rgba(0, 0, 0, 0);
-    box-shadow: 0 5px #666;
+    /*box-shadow: 0 5px #666;*/
     transform: translateY(1px);
 }
 
+
+
+
+
+
 .Pedidos {
-    width: 600px;
+    grid-area: Pedidos;
+    width: 200px;
     cursor: pointer;
     height: 40px;
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 0);
-    position: absolute;
-    top: 30%;
-    left: 28%;
+
     transition: transform 0.2s ease-in-out;
+    position: absolute;
+    top: 20%;
+    left: 30%;
 }
 
 .Pedidos:hover {
@@ -56,20 +87,26 @@ h1 {
 
 .Pedidos:active {
     background-color: rgba(0, 0, 0, 0);
-    box-shadow: 0 5px #666;
+    /*box-shadow: 0 5px #666;*/
     transform: translateY(1px);
 }
 
+
+
+
+
 .Cardapio {
+    grid-area: Cardapio;
     cursor: pointer;
-    width: 600px;
+    width: 200px;
     height: 40px;
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 0);
-    position: absolute;
-    top: 40%;
-    left: 28%;
+
     transition: transform 0.2s ease-in-out;
+    position: absolute;
+    top: 35%;
+    left: 30%
 
 }
 
@@ -82,7 +119,7 @@ h1 {
 
 .Cardapio:active {
     background-color: rgba(0, 0, 0, 0);
-    box-shadow: 0 5px #666;
+    /*box-shadow: 0 5px #666;*/
     transform: translateY(1px);
 }
 
