@@ -28,6 +28,7 @@ switch (expression) {
 }
 
 //throw
+//disparar um erro
 function digameunome(name = '') {
     if (name === "") {
         throw new Error("nome é obrigatorio")
@@ -36,6 +37,8 @@ function digameunome(name = '') {
 }
 
 //try/catch
+
+//executar apos um erro
 try {
     digameunome()
 
