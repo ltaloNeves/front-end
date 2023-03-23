@@ -1,0 +1,153 @@
+/*
+flex wrap
+
+cada nova linha é um novo eixo sendo criado
+*/
+
+
+.box{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border:  1px dashed red;
+}
+
+.box div {
+    border: 1px solid;
+    width: 80px;
+}
+
+
+/*
+flex-flow
+flex direction || flex wrap
+*/
+
+.box{
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column wrap;
+    border:  1px dashed red;
+}
+
+.box div {
+    border: 1px solid;
+    width: 80px;
+}
+
+
+
+/*
+gap 
+definir espaços entre elementos
+fixas px, pt
+flexiveis %, em, rem
+*/
+
+.box{
+
+    display: flex;
+    flex-direction: row;
+
+    border:  1px dashed red;
+    gap: 35px;
+}
+
+.box div {
+    border: 1px solid;
+
+}
+
+/*
+flex-basis: mudar o tamanho do item
+flex- grow: flex grow
+flex-shrink: flex shirnk
+flex
+order
+
+*/
+
+/*flex-basis*/
+.box{
+
+    display: flex;
+    flex-direction: row;
+
+    border:  1px dashed red;
+    gap: 35px;
+}
+
+.box div {
+    border: 1px solid;
+    flex-basis: auto ;
+
+}
+
+.box div:nth-child(2){
+    width: 4000px;
+}
+/*fllex-grow*/
+.box{
+
+    display: flex;
+    flex-direction: row;
+
+    border:  1px dashed red;
+
+
+}
+
+.box div {
+    border: 1px solid;
+    border-radius: 100px;
+
+
+}
+.box div:nth-child(2),
+.box div:nth-child(3){
+    flex-grow: 1;
+}
+
+
+/*
+alterando diverso elementos
+*/
+.page{
+    border: 2px solid;
+    min-height: 100vh;
+    display: flex;
+}
+
+aside{
+    background-color: greenyellow;
+    flex: 1;
+}
+main{
+    background-color: beige;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+
+}
+main section:nth-child(1){
+    background-color: aqua;
+    flex: 2;
+}
+main section:nth-child(2){
+    background-color: brown;
+    flex:0 50px;
+
+}
+main section:nth-child(3){
+    background-color: rebeccapurple;
+    flex: 1;
+}
+
+/**list-style: none;/
+
+
+
+
+    
