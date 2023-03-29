@@ -1,5 +1,5 @@
 
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './style.css';
 
 
@@ -15,6 +15,8 @@ function Home() {
   const [studentName, setStudentName] = useState('')
 
   const [students, setStudents] = useState([]);
+
+  const [user, setUSer] = useState({name: "", avatar: ""});
 //toda vez que esssa função é chamada um novo objeto é criado e ele vai ter duas propriedas
   function handleAddStudent(){
 
@@ -39,10 +41,42 @@ function Home() {
 
 
 //{} colocar o nome dentro disso para que ele fique mutavel
+
+useEffect (() => {
+  //corpo do usereffect
+  //açoes ou aquilo que quer que seja executado
+  //ele é executado assim que a interface é renderizada 
+  //usando para buscar um dado na api e carregar no novo render 
+
+  fetch("https://api.github.com/users/ltaloNeves")
+
+  .then(response => response.json())
+  .then(data => {
+    setUSer({
+      name: data.name,
+      avatar: data.avatar_url,
+    })
+
+  })
+
+
+}, [])
+
+//o array serve para colcoar os estados que o userEffect depende 
+
+
   return (
     <div className='container'>
 
-      <h1>Lista de presença</h1>
+      <header>
+
+        <h1>Lista de Presença</h1>
+        <div>
+          <strong>{user.name}</strong>
+          <img src={user.avatar} alt="foto de perfil" srcset="" />
+        </div>
+
+      </header>
       <input type="text" 
       placeholder="digite um nome"
       onChange={e => setStudentName(e.target.value) }
